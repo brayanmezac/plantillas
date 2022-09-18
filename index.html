@@ -3,46 +3,37 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Store ColombianDevs</title>
+    <title>ColombianDevs</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body>
+    
     <div class="login">
       <div class="form-container">
         <img class="logo" src="./assets/Logo.svg" />
-        <h1 class="title">ColombianDevs' templates</h1>
+        <h1 class="title">ColombianDevs' Heart</h1>
         <p class="subtitle">
-          Here you will find different templates and components made in html css
-          and js
+            this template presents a 3d heart which can be used with augmented reality.
         </p>
-        <button
-          class="primary-button signup-button"
-          onclick="window.open('login.html', '_self')"
-        >
-          Login</button
-        ><br />
-        <button
-          class="secondary-button signup-button"
-          onclick="window.open('password.html', '_self')"
-        >
-          Password</button
-        ><br />
-        <button
-          class="primary-button signup-button"
-          onclick="window.open('correo.html', '_self')"
-        >
-          Correo</button
-        ><br />
-        <button
-          class="secondary-button signup-button"
-          onclick="window.open('heart.html', '_self')"
-        >
-          Heart</button
-        ><br />
+        
+        <model-viewer 
+        bounds="tight" 
+        enable-pan src="./assets/cora.glb" 
+        ar 
+        ar-modes="webxr scene-viewer quick-look" 
+        camera-controls poster="poster.webp" 
+        shadow-intensity="0.97" 
+        shadow-softness="0.8" 
+        exposure="0.65" 
+        environment-image="neutral" 
+        camera-orbit="370.3deg 77.64deg auto" 
+        auto-rotate>
+
       </div>
     </div>
 
     <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   </body>
 </html>
